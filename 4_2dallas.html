@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="4_dallas_style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+                /* 전체 페이지 스타일 */
+                body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 스크롤 방지 */
+        }
+
+        /* 화면 전체에 배경 이미지 적용 */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('dallas_img/bada.svg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* 다른 요소보다 뒤로 보내기 */
+        }
+
+        /* 상단 고정 이미지 */
+        .top-fixed {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-height: 20vh; /* 화면 높이의 20%로 제한 */
+            object-fit: contain;
+            z-index: 10;
+        }
+
+        /* 하단 고정 이미지 */
+        .bottom-fixed {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-height: 20vh; /* 화면 높이의 20%로 제한 */
+            object-fit: contain;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+            <!-- 배경 이미지 -->
+             <div class="background"></div>
+
+             <!-- 상단 고정 이미지 -->
+             <img src="dallas_img/top4.svg" alt="Top Image" class="top-fixed">
+
+             <!-- 하단 고정 이미지 -->
+             <img src="dallas_img/bottom2.svg" alt="Bottom Image" class="bottom-fixed">
+
+
+     <!-- 오디오 요소 -->
+     <audio id="audio" src="dallas.mp3" preload="auto"></audio>
+
+        <!-- 가사 텍스트 컨테이너 -->
+        <div class="text-container">
+            <div class="text">
+                <p class="line">안녕, 손 흔들 때 넌 어떤 얼굴이었을까?</p>
+                <p class="line">넌 점점 작아져 어느덧 보이지 않아</p>
+                <p class="line">멀리 별이 더 빨리 오라 졸라대고</p>
+                <p class="line">천천히 채워질 내 길의 맨 처음 첫 장</p>
+                
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">찾고 싶고 또 원하고 다시 널 잃어버리겠지</p>
+                <p class="line">괜찮은 척, 혼자인 게</p>
+                <p class="line">맞다고 생각했어</p>
+
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">어쩌면 항상 누군갈 떠나보내는</p>
+                <p class="line">연습만 하려 했나 봐</p>
+                <p class="line">힘들었나 봐</p>
+
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">아름다워 아픈 거라 웃던</p>
+                <p class="line">우리를 생각해</p>
+                <p class="line">달릴수록 숨찰수록 뚜렷해져</p>
+                
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">Chasing love across the receivers</p>
+                <p class="line">놓쳤던 그 모든 것</p>
+                <p class="line">이제야 다시 느낀 순간들</p>
+                <p class="line">마주친 아름다운 여정의</p>
+                <p class="line">그 끝에서야 알게 돼</p>
+                <p class="line">널 느낄 수 있어</p>
+
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">낯선 밤들과 시간을 홀로 맛보네</p>
+                <p class="line">어쩐지 나쁘지 않아</p>
+                <p class="line">외롭지 않아</p>
+                
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">멀지만 가까이 느껴지던</p>
+                <p class="line">너의 온기로</p>
+                <p class="line">세상과 부딪히는 날 꼭 안아줘</p>
+                
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">Chasing love across the receivers</p>
+                <p class="line">놓쳤던 그 모든 것</p>
+                <p class="line">이제야 다시 느낀 순간들</p>
+                <p class="line">마주친 아름다운 여정의</p>
+                <p class="line">그 끝에서야 알게 돼</p>
+                <p class="line">널 느낄 수 있어</p>
+                
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">Oheoh</p>
+                <p class="line">아름다운 것들을 만났어</p>
+                <p class="line">Oheoh</p>
+                <p class="line">느끼고 있어</p>
+                
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">Chasing love across the receivers</p>
+                <p class="line">놓쳤던 그 모든 것</p>
+                <p class="line">이제야 다시 느낀 순간들</p>
+                <p class="line">마주친 아름다운 여정의</p>
+                <p class="line">그 끝에서야 알게 돼</p>
+                <p class="line">널 느낄 수 있어</p>
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+            </div>
+        </div>
+
+        <!-- 리셋 버튼 -->
+        <div id="imageContainer">
+            <img id="resetButton" src="dallas_img/dal_2.svg" alt="Reset Button">
+        </div>
+    </div>
+
+    <script src="4_script_dallas.js"></script>
+
+</body>
+</html>

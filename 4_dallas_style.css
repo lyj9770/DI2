@@ -1,0 +1,93 @@
+/* 공통 스타일 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+/* 슬라이드 이미지 컨테이너 */
+.image3-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 화면 전체 너비 */
+    height: 100vh; /* 화면 전체 높이 */
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(0px); /* 블러 효과 유지 */
+    background-color: rgb(255, 255, 255); /* 빈 공간이 있을 경우 배경색 추가 */
+}
+
+.image3 {
+    position: relative;
+    width: 200%;
+    height: 200%;
+    object-fit: contain; /* 비율을 유지하며 이미지가 잘리지 않도록 설정 */
+    transition: opacity 1s ease;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('fonts/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+/* 텍스트 컨테이너 */
+.text-container {
+    position: absolute;
+    top: 1700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    z-index: 1;
+    overflow-y: scroll; /* 세로 스크롤 활성화 */
+    overflow: hidden; /* 스크롤바 없애기 */
+    border: none;
+    padding: 20px;
+    background-color: transparent; /* 배경 투명 설정 */
+}
+
+/* 텍스트 스타일 */
+.text {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #ffffff; /* 텍스트 색상 */
+    line-height: 1; /* 줄 간격 */
+    padding-top: 40px; /* 텍스트 위쪽 여백 */
+    text-align: center;
+    letter-spacing: 1px; /* 글자 간격 */
+    font-family: 'Pretendard', sans-serif;
+    background-color: transparent; /* 텍스트 배경 투명 */
+}
+
+/* 리셋 버튼 */
+#resetButton {
+    top: 0.4%;
+    right: 13vh;
+    width: 6.5vw;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+    animation: rotateButton 3s linear infinite; /* 회전 애니메이션 추가 */
+    position: fixed;
+    transform: scale(0.8);
+    transform-origin: center; /* 크기 변환 기준점을 버튼의 중앙으로 설정 */
+}
+@keyframes rotateButton {
+    0% {
+        transform: translateX(90px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(90px) rotate(360deg);
+    }
+}
+
