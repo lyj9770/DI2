@@ -1,0 +1,115 @@
+/* 공통 스타일 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    overflow: hidden; /* 페이지의 스크롤을 숨김, 배경만 보여줌 */
+    animation: changeBackground 0.7s steps(1) infinite alternate; /* steps() 함수로 딱딱하게 변화 */
+}
+
+/* 리셋 버튼 */
+#resetButton {
+    position: absolute;
+    top: 2%;
+    right: 15vh;
+    width: 6.5vw;
+    height: auto;
+    cursor: pointer;
+    z-index: 9999;
+    animation: rotateButton 3s linear infinite; /* 회전 애니메이션 추가 */
+    position: fixed;
+}
+@keyframes rotateButton {
+    0% {
+        transform: translateX(90px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(90px) rotate(360deg);
+    }
+}
+
+
+
+/* 배경 색상 변경 애니메이션 */
+@keyframes changeBackground {
+    0% {
+        background-color: #000000; /* 검정색 */
+    }
+    50% {
+        background-color: #ff0000; /* 빨간색 */
+    }
+    100% {
+        background-color: #000000; /* 검정색으로 돌아옴 */
+    }
+}
+
+/* 텍스트 컨테이너 스타일 */
+.text-container {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 세로 상단 정렬 */
+    position: absolute;
+    z-index: 4; /* 텍스트를 배경 위에 배치 */
+    width: 100%;
+    height: 100%; /* 화면 높이에 맞춰서 꽉 차움 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    padding: 20px; /* 여백 추가 */
+    box-sizing: border-box; /* 여백 포함된 크기 계산 */
+    color: #000000; /* 텍스트 색상 (검정색) */
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('fonts/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 700;
+}
+
+/* 텍스트 스타일 */
+.text {
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    
+    font-size: 1.7vw; /* 화면 너비에 비례하도록 크기 설정 */
+    line-height: 0.6; /* 줄 간격 */
+    max-width: 90%; /* 화면 너비에 맞춰 최대 너비 설정 */
+    margin: 0; /* 기본 여백 제거 */
+}
+
+
+
+/* 텍스트 이미지 */
+.text-image {
+    /* position: absolute; */
+    top: 10px; /* 화면의 상단에서 10px 위치 */
+    left: 10px; /* 화면의 좌측에서 10px 위치 */
+    z-index: 2; /* 텍스트 이미지를 텍스트 위에 배치 */
+    width: 45vw; /* 화면 너비의 20%로 설정 */
+    height: auto; /* 높이는 비율에 맞게 자동 조정 */
+    position: fixed; /* 화면에 고정 */
+}
+
+/* misfit_img/meno.svg 이미지를 화면 중앙에 고정 */
+.nemo-image {
+    position: fixed; /* 화면에 고정 */
+    top: 50%; /* 화면의 세로 중앙 */
+    left: 50%; /* 화면의 가로 중앙 */
+    transform: translate(-50%, -50%); /* 이미지 크기에 관계없이 정확히 중앙 배치 */
+    z-index: -1; /* 텍스트보다 아래로 설정 */
+    width: 30vw; /* 이미지 크기 조정 (30% 화면 너비) */
+    height: auto; /* 비율에 맞게 높이 자동 조정 */
+}
+
+/* misfit_img/nemo.svg 이미지를 화면 중앙에 고정 */
+.nemo-image {
+    position: fixed; /* 화면에 고정 */
+    top: 50%; /* 화면의 세로 중앙 */
+    left: 48%; /* 화면의 가로 중앙 */
+    transform: translate(-50%, -50%); /* 이미지 크기에 관계없이 정확히 중앙 배치 */
+    z-index: -1; /* 텍스트보다 아래로 설정 */
+    width: 40vw; /* 이미지 크기 조정 (30% 화면 너비) */
+    height: auto; /* 비율에 맞게 높이 자동 조정 */
+}
+

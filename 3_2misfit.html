@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="3_2style_misfit.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      @font-face {
+            font-family: 'DungGeunMo';
+            src: url('fonts/DungGeunMo2.otf') format('opentype');
+        }
+        .random-text {
+            font-family: 'DungGeunMo', sans-serif; /* DungGeunMo 폰트 적용 */
+
+            position: absolute;
+            opacity: 0;
+            color: #ff0000;
+            transition: opacity 0.5s ease-out;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    
+     <!-- 오디오 요소 -->
+     <audio id="audio" src="misfit.mp3" preload="auto"></audio>
+
+         <!-- 리셋 버튼 -->
+            <!-- <button id="resetButton">Reset</button> -->
+            <img id="resetButton" src="misfit_img/misfit_cd.svg" alt="Reset Button">
+
+        </div>
+        <!-- 가사 텍스트 컨테이너 -->
+        <div class="text-container">
+            <div class="text">
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+                <p class="line">La, la-la-la-la-la-la</p>
+        <p class="line">La-la-la-la-la-la, la</p>
+        <p class="line">La, la-la-la-la-la-la</p>
+        <p class="line">La-la-la-la-la-la, la</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">I'm a misfit, 맞는 fit 자체가 없지</p>
+        <p class="line">숨이 턱턱 막힌 옷을 입은 느낌</p>
+        <p class="line">지겹지 고민 없이, 그냥 rip it</p>
+        <p class="line">나를 끌어내리려 할수록 get lifted</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">애써 날 재단하려는 건 됐어</p>
+        <p class="line">지금 이대로 가, the best never mess up</p>
+        <p class="line">의심이 없지, 그저 bring it to the next</p>
+        <p class="line">난 듣는 방법을 몰라, like I'm a def</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">왜 내가 발을 맞춰야 돼? 어림없음</p>
+        <p class="line">다 비슷한 모습, 더욱 거슬리는 bossin'</p>
+        <p class="line">Two phones 에어플레인, 모드 날아갈 때야</p>
+        <p class="line">누구는 내가 미쳤대, nope</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">It doesn't matter what they say</p>
+        <p class="line">어차피 난 내 마음대로 할 텐데</p>
+        <p class="line">난 언제나 튀어나온, 못 다치기 싫으면</p>
+        <p class="line">You better just stay out of my way, okay?</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">Get out my way y'all, get out my way</p>
+        <p class="line">아무도 나를 막지 못해</p>
+        <p class="line">우릴 억지로 똑같은 틀에 끼워 넣다간</p>
+        <p class="line">부숴버릴지도, you dig?</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">Get out my way y'all, get out my way</p>
+        <p class="line">지킬 법이법이 없네</p>
+        <p class="line">적당히라는 법도 날 멈출 방법도</p>
+        <p class="line">새 룰을 만들어 right here</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">누군가의 규칙 묻지 말고 따르라는 듯이</p>
+        <p class="line">채우려고 하네 목줄을 짓밟으려 해 꿈을</p>
+        <p class="line">내가 얼마나 높이 조준을 하고 있는지</p>
+        <p class="line">모르니, 따분한 소릴 늘어놔</p>
+        
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">뻔한 소리뿐인 plot</p>
+        <p class="line">내게 닿기도 전에 뻗어, LeBron block</p>
+        <p class="line">입이 쩍 벌어지네 이젠 분위기 파악</p>
+        <p class="line">하길 우리 태도는 늘 do or die</p>
+        <p class="line">It's been a minute, I'm in it, 이미 난 이기는</p>
+        <p class="line">기분 느끼며 지키는 motto without the business</p>
+
+        <p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        <p class="line">Misfit never fit in</p>
+<p class="line">날 막아서는 것들 이미 발아래로 six feet</p>
+<p class="line">깨버려 시스템, 믿어 너의 instinct</p>
+<p class="line">Don't stop with attitude like you are 15</p>
+<p class="line">Rude boys hit the track 식겁해</p>
+<p class="line">우린 다르게 보는 중이라 삐딱해</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Get out my way y'all, get out my way</p>
+<p class="line">아무도 나를 막지 못해</p>
+<p class="line">우릴 억지로 똑같은 틀에 끼워 넣다간</p>
+<p class="line">부숴버릴지도, you dig?</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Get out my way y'all, get out my way</p>
+<p class="line">지킬 법이법이 없네</p>
+<p class="line">적당히라는 법도 날 멈출 방법도</p>
+<p class="line">새 룰을 만들어 right here (break it down like)</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">La, la-la-la-la-la-la (ooh-ooh)</p>
+<p class="line">La-la-la-la-la-la, la (ha-ha-ha)</p>
+<p class="line">La, la-la-la-la-la-la (here's my favorite part, uh)</p>
+<p class="line">La-la-la-la-la-la, la (now everybody sing)</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">La, la-la-la-la-la-la (hey, hey, I wanna hear you like)</p>
+<p class="line">La-la-la-la-la-la, la (hey, hey, come on and tell me like)</p>
+<p class="line">La, la-la-la-la-la-la (hey, hey, hey)</p>
+<p class="line">La-la-la-la-la-la, la (check it out, yo)</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Aight, 위기도 분위기도 나를 움직이는 건</p>
+<p class="line">아냐, 내가 옳다 느낄 때 던지기로</p>
+<p class="line">All of my impact, 너도 이걸 느낄 때</p>
+<p class="line">넌 너만의 길에, be original</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">한계라고 그어 놓은 선 위</p>
+<p class="line">당연하단 듯, crossin' over it</p>
+<p class="line">매일 세워, new anniversary</p>
+<p class="line">매일 써, history 외쳐, we made it</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Warnin' NCT we mobbin'</p>
+<p class="line">네가 어디에 있든지, we comin'</p>
+<p class="line">눈이 마주치면, 망설이지 말고, jump in</p>
+<p class="line">Baby, come and get it on my team, let's run it</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Gotta get up, go to bigger better things</p>
+<p class="line">갈 길이 멀어, 피드백은 no, thanks</p>
+<p class="line">똑바로 걷기엔 전부 비스듬해</p>
+<p class="line">우린 다르게 보는 중이라 삐딱해</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Get out my way y'all, get out my way</p>
+<p class="line">아무도 나를 막지 못해</p>
+<p class="line">우릴 억지로 똑같은 틀에 끼워 넣다간</p>
+<p class="line">부숴버릴지도, you dig?</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">Get out my way y'all, get out my way</p>
+<p class="line">지킬 법이법이 없네</p>
+<p class="line">적당히라는 법도 날 멈출 방법도</p>
+<p class="line">새 룰을 만들어 right here</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">La, la-la-la-la-la-la</p>
+<p class="line">La-la-la-la-la-la, la</p>
+<p class="line">La, la-la-la-la-la-la</p>
+<p class="line">La-la-la-la-la-la, la</p>
+
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">La, la-la-la-la-la-la</p>
+<p class="line">La-la-la-la-la-la, la</p>
+<p class="line">La, la-la-la-la-la-la</p>
+<p class="line">La-la-la-la-la-la, la</p>
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+<p class="line">&nbsp;</p> <!-- 빈 줄 -->
+        
+       
+<img src="misfit_img/nemo.svg" class="nemo-image" alt="Nemo Image">
+   
+
+    <!-- 좌측 상단에 위치한 텍스트 이미지 -->
+    <img src="misfit_img/text.svg" alt="Text Image" class="text-image">
+
+    
+    </div>
+
+    <script src="3_2misfit.js" defer></script>
+</body>
+</html>
