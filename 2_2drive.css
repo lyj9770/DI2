@@ -60,7 +60,7 @@ html {
     transition: opacity 1s ease;
 }
 
-/* 텍스트 컨테이너 */
+/* 기본 텍스트 컨테이너 스타일 */
 .text-container {
     position: absolute;
     top: 1100px;
@@ -70,10 +70,9 @@ html {
     height: auto;
     z-index: 1;
     overflow-y: scroll;
-    overflow: hidden; /* 빼면안됨 하얀줄생김 - - */
+    overflow: hidden;
     border: none;
-    /* box-sizing: border-box; /* padding과 border를 요소 크기에 포함 */ 
-    background-color: transparent; /* 배경색이 없으면 투명 */
+    background-color: transparent;
     padding: 20px;
 }
 
@@ -82,11 +81,52 @@ html {
     padding: 20px;
     font-size: 1.2rem;
     color: #212121;
-    line-height: 0.5;
-    padding-top: 80px; /* 텍스트 위쪽 여백 */
+    line-height: 1.5;
+    padding-top: 80px;
     text-align: center;
-    filter: blur(1.2px); /* 텍스트 블러 효과 */
-    letter-spacing: 2px; /* 글자 사이를 2px만큼 벌림 */
+    filter: blur(1.2px);
+    letter-spacing: 2px;
 }
 
+/* 반응형 디자인: 작은 화면 (모바일) */
+@media (max-width: 768px) {
+    .text-container {
+        top: 900px; /* 화면 크기에 맞춰 위치 조정 */
+        width: 90%; /* 더 작은 폭으로 설정 */
+        padding: 15px; /* 여백 조정 */
+    }
+    
+    .text {
+        font-size: 1rem; /* 글자 크기 줄임 */
+        line-height: 1.3; /* 줄 간격 조정 */
+        letter-spacing: 1.5px; /* 글자 간격 조정 */
+    }
+}
 
+/* 반응형 디자인: 중간 화면 (태블릿) */
+@media (max-width: 1024px) {
+    .text-container {
+        top: 1000px; /* 위치 조정 */
+        width: 85%; /* 약간 더 좁게 */
+    }
+
+    .text {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+}
+
+/* 반응형 디자인: 아주 작은 화면 (작은 모바일) */
+@media (max-width: 480px) {
+    .text-container {
+        top: 850px;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .text {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        letter-spacing: 1px;
+    }
+}
